@@ -1,6 +1,12 @@
 # StockMarket_explainableAI
-#### Contributor: 
+Contributing Members: 
 - Sohyun Lee
 - Shin Ehara
 - Jou-Ying Lee
 
+## Abstract
+blank for now
+
+## Directory Structure
+-- Data
+	- `merge_filter_data.csv`: contains merged processed data of time intervals (8:30AM - 9:30AM EST)
