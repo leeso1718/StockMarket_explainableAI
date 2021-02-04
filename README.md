@@ -9,6 +9,6 @@ blank for now
 
 ## Directory Structure
 * Data 
-	* `merge_filter_data.csv`: contains merged processed data of time intervals (8:30AM - 9:30AM EST)
-	* `feat_eng_data.csv`: contains feature engineered data with volatility column
-	* `data_vol.csv`: contains date and volatility column
+	* `merge_filter_data.csv`</br>contains merged processed data of time intervals (8:30AM - 9:30AM EST)
+	* `feat_eng_data.csv`</br>contains feature engineered data with volatility column
+	* `data_vol.csv`</br>contains date and volatility column
