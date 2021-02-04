@@ -4,9 +4,11 @@ from os import listdir
 import pandas as pd
 import datetime
 
-# obtain needed data for processing
-# Filter out data to use volatility on data an hour prior to market open
-# Market Open: NYSE open Monday-Friday 9:30am to 4pm. Eastern time
+'''
+This function filters out data to use volatility on data an hour prior to market open
+Market Open: NYSE open Monday-Friday 9:30am to 4pm. Eastern time
+@ return: pandas dataframe
+'''
 def raw_to_data(fp):
     
     # read in data
@@ -22,3 +24,21 @@ def raw_to_data(fp):
     data.reset_index(drop=True, inplace=True)
     
     return data
+
+'''
+This function merges processed files from raw path to data path
+@ return: pandas dataframe
+'''
+def merge_data(raw_path):
+    
+    # output dataframe
+    output = pd.DataFrame()
+    # all files to be processed
+    raw_files = listdir(raw_path)
+    
+    for curr_file in raw_files:
+        fp = raw_path + curr_file
+        data = raw_to_data(fp)
+        output = pd.concat([output, data])
+    
+    return output
