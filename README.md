@@ -14,9 +14,9 @@ blank for now
 	* `data_vol.csv`</br>contains date and volatility column
 
 * src
-	* data
+	* *data*
 		* `make_dataset.py`</br>scripts to obtain necessary data for this project
-	* features
+	* *features*
 		* `build_features.py`</br>scripts to build features from merged data
 		* `build_labels.py`</br>scripts to create labels for image classification
 		* `build_images.py`</br>scripts to convert and save time series data to images
