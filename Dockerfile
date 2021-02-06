@@ -3,11 +3,11 @@
 
 # data science notebook
 # https://hub.docker.com/repository/docker/ucsdets/datascience-notebook/tags
-ARG BASE_CONTAINER=ucsdets/datascience-notebook:2020.2-stable
+# ARG BASE_CONTAINER=ucsdets/datascience-notebook:2020.2-stable
 
 # scipy/machine learning (tensorflow)
 # https://hub.docker.com/repository/docker/ucsdets/scipy-ml-notebook/tags
-# ARG BASE_CONTAINER=ucsdets/scipy-ml-notebook:2020.2-stable
+ARG BASE_CONTAINER=ucsdets/scipy-ml-notebook:2020.2-stable
 
 FROM $BASE_CONTAINER
 
