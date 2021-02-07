@@ -38,10 +38,16 @@ Deep learning architectures are now publicly recognized and repeatedly proven to
 	
 	**report_img**</br>
 	* This folder contains images extracted from coded notebooks and included in the written report
-* **src**
-	* *data*
-		* `make_dataset.py`</br>scripts to obtain necessary data for this project
-	* *features*
+* **src**</br>
+	This folder contains library codes extracted from notebooks
+
+	**data**</br>
+		* `make_dataset.py`</br>scripts to prepare necessary data for this project
+		
+	**features**</br>
 		* `build_features.py`</br>scripts to build features from merged data
 		* `build_labels.py`</br>scripts to create labels for image classification
 		* `build_images.py`</br>scripts to convert and save time series data to images
+* **`Dockerfile`**</br>
+	This is the dockerfile necessary to build the environment for this project development
+	
