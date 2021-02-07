@@ -2,5 +2,5 @@
 	"raw_path": "data/TSLA/RawData",
 	"result_path": "result/",
 	"time_wdw": 5,
-	"output_img_path": "data/folderforrun"
+	"output_img_path": "data/imgs/all"
 }
