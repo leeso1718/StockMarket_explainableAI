@@ -50,4 +50,5 @@ Deep learning architectures are now publicly recognized and repeatedly proven to
 		* `build_images.py`</br>scripts to convert and save time series data to images
 * **`Dockerfile`**</br>
 	This is the dockerfile necessary to build the environment for this project development
-	
+* **`run.py`**</br>
+	This is the main python file to execute our program
