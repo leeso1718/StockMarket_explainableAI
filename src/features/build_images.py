@@ -16,13 +16,13 @@ This function takes in dataframe transformed by Gramian Angular Field
 and converts and saves image coordinates to actual images
 @ return: None
 '''
-def convert_img(idx, curr_X_gadf, gramian_df):
+def convert_img(img_path, idx, curr_X_gadf, gramian_df):
     
     fig = plt.figure()
     ax = plt.subplot(111)
 
     date_str = str(gramian_df.index[idx].date())
-    fname = f'imgs/{date_str}.png'
+    fname = f'{img_path}/{date_str}.png'
 
     ax.imshow(curr_X_gadf, cmap='rainbow', origin='lower')
     ax.set_title('')
@@ -36,7 +36,7 @@ This function wraps transformations of time series data by
 Gramian Angular Field with actual image conversion
 @ return: None
 '''
-def gramian_img(gramian_df):
+def gramian_img(img_path, gramian_df):
     
     # scale inputs to [-1,1]
     scaler = MinMaxScaler(feature_range=(-1,1))
@@ -51,4 +51,5 @@ def gramian_img(gramian_df):
         # gramian
         curr_X_gadf = gadf.fit_transform(curr_feat)
         # convert image
-        convert_img(idx, curr_X_gadf[0], gramian_df)
+        convert_img(img_path, idx, curr_X_gadf[0], gramian_df)
+

@@ -1,7 +1,6 @@
 {
-	"raw_path": "../../data/TSLA/RawData/",
-	"data_path": "../../data/TSLA/ProcData",
-	"merged_data": "merge_filter_data.csv",
-	"feat_data": "feat_eng_data.csv",
-	"vol_data": "data_vol.csv"
+	"raw_path": "data/TSLA/RawData",
+	"result_path": "result/",
+	"time_wdw": 5,
+	"output_img_path": "data/folderforrun"
 }
