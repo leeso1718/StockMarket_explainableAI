@@ -26,11 +26,13 @@ Deep learning architectures are now publicly recognized and repeatedly proven to
 * **notebooks**</br>
 	This folder is the notebook directory
 	
+	* `CNN_Model.ipynb`</br>is the development notebook for CNN implementation
+	* `run_file.ipynb`</br>is the main development notebook that contains the same code as `run.py`
 	**data_nb**</br>
 	* `data_eda.ipynb`</br>is the notebook with eda work demonstration
 	* `data_pipeline.ipynb`</br>is the notebook that wraps together data cleaning to feature engineering
 	* `timeseries_convert_img`</br>is the notebook with image conversion work done
-
+	
 * **src**
 	* *data*
 		* `make_dataset.py`</br>scripts to obtain necessary data for this project
