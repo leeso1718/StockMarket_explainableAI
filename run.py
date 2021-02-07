@@ -3,6 +3,7 @@
 import sys, json, os
 import warnings 
 import pandas as pd
+import matplotlib.pyplot as plt
 
 warnings.filterwarnings("ignore")
 sys.path.insert(0, 'src')
@@ -12,22 +13,7 @@ from features import build_features, build_images, build_labels
 
 # define main
 def main(targets):
-    
-    # all case
-    if ('all' in targets):
-        
-        # get all params
-        with open('config/data_params.json') as fh:
-            data_cfg = json.load(fh)
-        
-        raw_fp = data_cfg['raw_path']
-        time_wdw = data_cfg['time_wdw']
-        img_fp = data_cfg['output_img_path']
-        
-        # merged 8:30-9:30 data
-        data = make_dataset.merge_data(raw_fp)
-        
-    # test case: merged already
+
     if ('test' in targets):
         
         # get test params
@@ -39,8 +25,22 @@ def main(targets):
         time_wdw = data_cfg['time_wdw']
         img_fp = data_cfg['output_img_path']
         
-        data_file = os.path.join(test_fp, test_fn)
-        data = pd.read_csv(test_data_file, parse_dates = ['time'])
+        data_file = os.path.join(raw_fp, test_fn)
+        data = pd.read_csv(data_file, parse_dates = ['time'])
+
+    # all case
+    else:
+        
+        # get all params
+        with open('config/data_params.json') as fh:
+            data_cfg = json.load(fh)
+        
+        raw_fp = data_cfg['raw_path']
+        time_wdw = data_cfg['time_wdw']
+        img_fp = data_cfg['output_img_path']
+        
+        # merged 8:30-9:30 data
+        data = make_dataset.merge_data(raw_fp)
         
     # data with volatility
     data = build_features.feature_engineer(data, time_wdw)

@@ -21,7 +21,8 @@ def convert_img(img_path, idx, curr_X_gadf, gramian_df):
     fig = plt.figure()
     ax = plt.subplot(111)
 
-    date_str = str(gramian_df.index[idx].date())
+    # date_str = str(gramian_df.index[idx].date())
+    date_str = str(gramian_df.index[idx])
     fname = f'{img_path}/{date_str}.png'
 
     ax.imshow(curr_X_gadf, cmap='rainbow', origin='lower')
