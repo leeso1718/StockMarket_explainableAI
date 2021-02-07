@@ -5,10 +5,8 @@ from matplotlib import pyplot as plt
 import datetime
 import numpy as np
 
-from pyts.datasets import load_gunpoint
 from pyts.image import GramianAngularField
 
-from multiprocessing import Pool, cpu_count
 import os
 
 '''
