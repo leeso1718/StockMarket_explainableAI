@@ -53,7 +53,7 @@ def merge_data(raw_path):
     raw_files = listdir(raw_path)
     
     for curr_file in raw_files:
-        fp = raw_path + curr_file
+        fp = raw_path + '/' +curr_file
         data = raw_to_data(fp)
         output = pd.concat([output, data])
     
@@ -67,8 +67,36 @@ def merge_data_market(raw_path):
     raw_files = listdir(raw_path)
     
     for curr_file in raw_files:
-        fp = raw_path + curr_file
+        fp = raw_path + '/' +curr_file
         data = raw_to_data_market(fp)
         output = pd.concat([output, data])
     
     return output
+
+'''
+This function serves as an ETL helper function for preparing data for
+gdf transformation (a wrapper)
+Each entry correspond to a single date of features
+'''
+def gaf_df(data):
+    
+    data.time = data.time.transform(lambda x: x.date())
+    data = data[['time', 'Volatility']]
+    data.rename(columns={'time':'Date'}, inplace=True)
+    # group volatilities by dates in order for gfa to work with
+    temp = data.groupby('Date', as_index=True)['Volatility'].apply(list).to_frame()
+    data = pd.DataFrame(temp['Volatility'].to_list(), index=temp.index)
+    
+    return data
+
+
+
+
+
+
+
+
+
+
+
+
