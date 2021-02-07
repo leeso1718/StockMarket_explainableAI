@@ -9,16 +9,15 @@ Deep learning architectures are now publicly recognized and repeatedly proven to
 
 ## Directory Structure
 * **config**</br>
-	
 	This folder contains json files for main and testing parameters
 	* `data_params.json`</br>contains parameters for running main on all data
 	* `test_params.json`</br>contains parameters for running main on test data
 * **data**</br>
-	This folder contains all stock data from time series to image representation
-	* 
-	* `merge_filter_data.csv`</br>contains merged processed data of time intervals (8:30AM - 9:30AM EST)
-	* `feat_eng_data.csv`</br>contains feature engineered data with volatility column
-	* `data_vol.csv`</br>contains date and volatility column
+	This folder contains all stock data from time series to image representation</br>
+	**TSLA**</br>
+	* RawData</br> This folder contains all obtained raw time series data
+	* ProcData</br>This folder contains all processed csv files from RawData
+	* TestData</br> This folder contains test target
 
 * **src**
 	* *data*
