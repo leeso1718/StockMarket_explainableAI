@@ -21,9 +21,9 @@ RUN apt-get -y install htop
 # 3) install packages
 RUN pip install --no-cache-dir networkx scipy python-louvain fastai
 
-COPY requirements.txt /tmp/
-RUN pip install --requirement /tmp/requirements.txt
-COPY . /tmp/
+# COPY requirements.txt /tmp/
+# RUN pip install --requirement /tmp/requirements.txt
+# COPY . /tmp/
 
 # 4) change back to notebook user
 COPY /run_jupyter.sh /
