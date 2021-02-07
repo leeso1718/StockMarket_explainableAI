@@ -23,6 +23,13 @@ Deep learning architectures are now publicly recognized and repeatedly proven to
 	**imgs**</br>
 	* all</br> This folder contains all images converted from time series
 	* test</br> This folder contains test images converted by main
+* **notebooks**</br>
+	This folder is the notebook directory
+	
+	**data_nb**</br>
+	* `data_eda.ipynb`</br>is the notebook with eda work demonstration
+	* `data_pipeline.ipynb`</br>is the notebook that wraps together data cleaning to feature engineering
+	* `timeseries_convert_img`</br>is the notebook with image conversion work done
 
 * **src**
 	* *data*
