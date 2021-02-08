@@ -13,7 +13,7 @@ Deep learning architectures are now publicly recognized and repeatedly proven to
 		* `test` target works on the data of only 1 day out of all the data we have for 2 years in total. Specifically, it uses the intra-day transaction record from January 15th, 2021.
 		*Data are stored as 2 separate files.
 			* The first file is at `../data/TSLA/TestData/test_20210115.csv` and covers the transaction data during the hour prior to the market open on that date.
-				* The second file is at `../data/TSLA/TestData/test_market_vol_20210115.csv` and covers the transaction data during the market hours on that data. This second data file includes preprocessed data of volatility for the sake of ease of `test` execution.
+			* The second file is at `../data/TSLA/TestData/test_market_vol_20210115.csv` and covers the transaction data during the market hours on that data. This second data file includes preprocessed data of volatility for the sake of ease of `test` execution.
 	* **Output**
 		* The execution results in 2 outputs: an image and a table.
 			* **Image**
