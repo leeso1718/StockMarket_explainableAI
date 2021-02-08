@@ -18,6 +18,10 @@ USER root
 
 RUN apt-get -y install htop
 
+# CUDA Toolkit
+RUN conda install -y cudatoolkit=10.1 cudnn nccl && \
+    conda clean --all -f -y
+
 # 3) install packages
 RUN pip install --no-cache-dir networkx scipy python-louvain fastai
 
