@@ -1,22 +1,33 @@
+# imports and dependencies
+import pandas as pd
+from sklearn.preprocessing import MinMaxScaler
+from matplotlib import pyplot as plt
+import datetime
+import numpy as np
+
+import os
+
 '''
 This function calculates the volatility change before and after the market open.
 Then it correspondinglyl creates a label for each day.
 The output is a table with two rows: one with image_id (e.g. '2019-01-30.png') and another with label (e.g. '8').
 '''
-def label(data, market_data):
+
+
+def label(data, market_data, output_fp):
     '''
     data: data with volatility during 1 hour before market open
     market_data: data with volatility during market open
     '''
     # Calculate mean volatility during 1 hour before marekt open each day
-    before_vol = data.assign(date=data.time.apply(lambda x:x.date()))
-    before_vol = data[['date','Volatility']]
+    before_vol = data.assign(date=data.time.apply(lambda x: x.date()))
+    before_vol = before_vol[['date','Volatility']]
     before_vol_mean = before_vol.groupby('date')['Volatility'].mean()
     before_vol_mean = pd.DataFrame(before_vol_mean)
     before_vol_mean.rename(columns={"Volatility":"Mean Vol Before Open"},inplace=True)
     
     # Calculate mean volatility during marekt open
-    after_vol = data_market.assign(date=data_market.time.apply(lambda x:x.date()))
+    after_vol = market_data.assign(date=market_data.time.apply(lambda x:x.date()))
     after_vol = after_vol[['date','Volatility']]
     after_vol_mean = after_vol.groupby('date')['Volatility'].mean()
     after_vol_mean = pd.DataFrame(after_vol_mean)
@@ -36,5 +47,10 @@ def label(data, market_data):
     img_lbl_dir = img_lbl_dir.reset_index()
     img_lbl_dir['label'] = img_lbl_dir['Percentile Class']
     img_lbl_dir = img_lbl_dir[['image_id', 'label']]
-
-    return mg_lbl_dir
+    
+    # Save mg_lbl_dir to output_fp
+    name = 'image_label_dir.csv'
+    path = os.path.join(output_fp, name)
+    img_lbl_dir.to_csv(path, index=False)
+    
+    return 
