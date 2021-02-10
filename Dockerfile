@@ -19,7 +19,7 @@ USER root
 RUN apt-get -y install htop
 
 # CUDA Toolkit
-RUN conda install -y cudatoolkit=10.1 cudnn nccl && \
+RUN conda install -y cudatoolkit=11.2 cudnn nccl && \
     conda clean --all -f -y
 
 # 3) install packages
