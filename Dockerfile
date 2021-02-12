@@ -18,8 +18,17 @@ USER root
 
 RUN apt-get -y install htop
 
-# 3) install packages
-RUN pip install --no-cache-dir networkx scipy python-louvain fastai
+# CUDA Toolkit
+RUN conda install -y cudatoolkit=10.1 cudnn nccl && \
+    conda clean --all -f -y
+
+# Torch
+RUN pip install --no-cache-dir \
+    torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio==0.7.2 \
+    -f https://download.pytorch.org/whl/torch_stable.html
+
+# Other packages
+RUN pip install --no-cache-dir networkx scipy python-louvain fastai==1.0.61
 
 # COPY requirements.txt /tmp/
 # RUN pip install --requirement /tmp/requirements.txt

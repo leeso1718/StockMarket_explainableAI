@@ -78,8 +78,8 @@ This function serves as an ETL helper function for preparing data for
 gdf transformation (a wrapper)
 Each entry correspond to a single date of features
 '''
-def gaf_df(data):
-    
+def gaf_df(df):
+    data = df.copy()
     data.time = data.time.transform(lambda x: x.date())
     data = data[['time', 'Volatility']]
     data.rename(columns={'time':'Date'}, inplace=True)
