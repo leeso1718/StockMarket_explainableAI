@@ -2,6 +2,7 @@
 
 NewAPI/
 India/imgs/models/
+India/imgs/models/model_1.pth
 *.pth
 
 # Byte-compiled / optimized / DLL files
