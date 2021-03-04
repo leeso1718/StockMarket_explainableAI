@@ -1,7 +1,6 @@
 .DS_Store
 
 NewAPI/
-India/imgs/models/
 India/imgs/models/model_1.pth
 *.pth
 
