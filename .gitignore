@@ -1,6 +1,8 @@
 .DS_Store
 
 NewAPI/
+India/imgs/models/model_1.pth
+*.pth
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
