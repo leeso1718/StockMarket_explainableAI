@@ -1,3 +1,0 @@
-[submodule "grad-cam-pytorch"]
-	path = grad-cam-pytorch
-	url = https://github.com/kazuto1011/grad-cam-pytorch.git
