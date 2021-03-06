@@ -28,7 +28,7 @@ RUN pip install --no-cache-dir \
     -f https://download.pytorch.org/whl/torch_stable.html
 
 # Other packages
-RUN pip install --no-cache-dir networkx scipy==1.6.0 python-louvain fastai==1.0.55 opencv-python pyts
+RUN pip install --no-cache-dir networkx scipy==1.6.0 python-louvain fastai==1.0.56 opencv-python pyts
 
 # COPY requirements.txt /tmp/
 # RUN pip install --requirement /tmp/requirements.txt
