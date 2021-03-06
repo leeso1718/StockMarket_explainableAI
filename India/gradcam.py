@@ -44,14 +44,15 @@ class GradCam():
         pred_class,pred_idx,probs = learn.predict(x_img)
         label1= str(pred_class) if not label1 else label1
         
-#         xb,_ = learn.data.one_item(x_img)
-#         xb_img = Image(learn.data.denorm(xb)[0])
-        xb,_ = learn.data.one_item(x_img)
-        xb_img = Image(learn.data.denorm(xb)[0])
+        xb,_ = learn.data.one_item(x_img,denorm=False)
+# #         xb,_ = learn.data.one_item(x_img)
+#         xb_img = Image(learn.data.denormalize(xb)[0])
+        xb_img = Image(learn.data.one_item(xb,denorm=True))
         probs = probs.numpy()
         
-        label1_idx = learn.data.classes.index(label1)
-        hmap1,xb_grad1 = get_grad_heatmap(learn,xb,label1_idx,size=xb_img.shape[-1])
+        label1_idx = learn.data.classes.index(int(label1))
+        hmap1,xb_grad1 = get_grad_heatmap(learn,xb,label1_idx,size=len(xb_img.shape))
+#         hmap1,xb_grad1 = get_grad_heatmap(learn,xb,label1_idx,size=xb_img.shape[-1])
         prob1 = probs[label1_idx]
         
         label2_args = None
