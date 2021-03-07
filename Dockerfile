@@ -24,11 +24,11 @@ RUN conda install -y cudatoolkit=10.1 cudnn nccl && \
 
 # Torch
 RUN pip install --no-cache-dir \
-    torch==1.3.1+cu101 torchvision==0.8.2+cu101 torchaudio==0.7.2 \
+    torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio==0.7.2 \
     -f https://download.pytorch.org/whl/torch_stable.html
 
 # Other packages
-RUN pip install --no-cache-dir networkx scipy==1.6.0 python-louvain fastai==1.0.60 opencv-python pyts
+RUN pip install --no-cache-dir networkx scipy==1.6.0 python-louvain fastai==1.0.57 opencv-python pyts
 
 # COPY requirements.txt /tmp/
 # RUN pip install --requirement /tmp/requirements.txt
