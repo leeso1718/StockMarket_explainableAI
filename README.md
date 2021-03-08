@@ -11,7 +11,7 @@ Project Website at: https://connielee99.github.io/Explainable-AI-in-Finance/
 
 ## Instructions on Runing Project
 * This project aims to apply the Grad-CAM technique to a CNN model trained on images that represent closing prices during the first hour of market exchange. 
-* **To engineer data and create a CNN model**, you would need to run each notebook in 'notebooks' folder in following order:
+* **To engineer data and create a CNN model**, you would need to run each notebook in `notebooks` folder in following order:
 	* **1. Run every cell in `Data Processing.ipynb`**
 		* This notebooke is preprocessing the raw data by extracting closing prices during first hour after market open and labeling depends on prices increasing or decreasing
 		* **Input:** `raw_NIFTY100.csv` **output:** `first_combined.csv` contains closing prices during the first hour of market exchange
