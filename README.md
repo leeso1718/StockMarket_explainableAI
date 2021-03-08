@@ -10,11 +10,16 @@ Deep learning architectures are now publicly recognized and repeatedly proven to
 Project Website at: https://connielee99.github.io/Explainable-AI-in-Finance/
 
 ## Instructions on Runing Model
-* This project aims to apply the Grad-CAM technique to a CNN model trained on images that represent closing prices during the rirst hour of market exchange.
-* When you execute this code in the directory, it performs the following things:
-	* **Preprocessing**
+* This project aims to apply the Grad-CAM technique to a CNN model trained on images that represent closing prices during the first hour of market exchange. 
+* You would need to run each notebook in following order:
+	* **1. Preprocessing**
 	* Run every cell in `Data Processing.ipynb`
+	* This notebooke is preprocessing the raw data by extracting closing prices during first hour after market open and labeling depends on prices increasing or decreasing
+		* **input**</br>
+		* `raw_NIFTY100.csv`
 
+		* **output**</br>
+		* `first_combined.csv` </br> contains closing prices during the first hour of market exchange
 
 ## Directory Structure
 * **config**</br>
@@ -30,7 +35,7 @@ Project Website at: https://connielee99.github.io/Explainable-AI-in-Finance/
 	* `raw_NIFTY100.csv`</br>contains raw stoack market data; time series data
 
 	**processed data**</br>
-	* `first_combined.csv`</br>contains data after preprocessing; extracting first hour after market open. (9:15-10:15)
+	* `first_combined.csv`</br>contains closing prices during the first hour of market exchange
 	* `gramian_df.csv`</br>contains data after implementing gramian angular algorithm
 	* `label_dir_2.csv`</br>contains data with label Whether the price goes up or down that day
 * **gradcam_submodule @ fd10ff7**</br>
@@ -48,7 +53,7 @@ Project Website at: https://connielee99.github.io/Explainable-AI-in-Finance/
 	
 	**report_img**</br>
 	* This folder contains images extracted from coded notebooks and included in the written report
-	* 
+
 * **src**</br>
 	This folder contains library codes extracted from notebooks
 	
@@ -56,6 +61,7 @@ Project Website at: https://connielee99.github.io/Explainable-AI-in-Finance/
 	* `build_features.py`</br>scripts to build features from merged data
 	* `build_labels.py`</br>scripts to create labels for image classification
 	* `build_images.py`</br>scripts to convert and save time series data to images
+	
 	**model**</br>
 	* `gradcam.py`</br>scripts to implement gradcam
 
