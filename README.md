@@ -41,16 +41,16 @@ Project Website at: https://connielee99.github.io/Explainable-AI-in-Finance/
 	* `first_combined.csv`</br>contains data after preprocessing (extracting first hour after market open. (9:15-10:15))
 	* `gramian_df.csv`
 	* `label_dir_2.csv`
+* **gradcam_submodule @ fd10ff7**
+	This folder is the submodule for gradcam
+	
 * **notebooks**</br>
 	This folder is the notebook directory
 	
-	* `CNN_Model.ipynb`</br>is the development notebook for CNN implementation
-	* `run_file.ipynb`</br>is the main development notebook that contains the same code as `run.py`
-	
-	**data_nb**</br>
-	* `data_eda.ipynb`</br>is the notebook with eda work demonstration
-	* `data_pipeline.ipynb`</br>is the notebook that wraps together data cleaning to feature engineering
-	* `timeseries_convert_img`</br>is the notebook with image conversion work done
+	* `CNN + Grad-CAM.ipynb`</br>is the development notebook for CNN and GradCam implementation
+	* `Data Processing.ipynb`</br>is the notebook that wraps together data cleaning to feature engineering
+	* `EDA.ipynb`</br>is the notebook with eda work demonstration
+	* `Image Conversion.ipynb`</br>is the notebook with image conversion work done
 * **references**</br>
 	This folder contains additional information/references in regards to our project
 	
@@ -58,14 +58,19 @@ Project Website at: https://connielee99.github.io/Explainable-AI-in-Finance/
 	* This folder contains images extracted from coded notebooks and included in the written report
 * **src**</br>
 	This folder contains library codes extracted from notebooks
-
-	**data**</br>
-		* `make_dataset.py`</br>scripts to prepare necessary data for this project
-		
+	
 	**features**</br>
 		* `build_features.py`</br>scripts to build features from merged data
 		* `build_labels.py`</br>scripts to create labels for image classification
 		* `build_images.py`</br>scripts to convert and save time series data to images
+	**model**</br>
+		* `gradcam.py`</br>scripts to implement gradcam
+
+* **test**
+      This folder contains test results and test images
+      
+      **grad_cam_result**</br>
+		
 * **`Dockerfile`**</br>
 	This is the dockerfile necessary to build the environment for this project development
 * **`run.py`**</br>
