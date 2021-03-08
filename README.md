@@ -23,7 +23,7 @@ Project Website at: https://connielee99.github.io/Explainable-AI-in-Finance/
 	* **3. Run every cell in `CNN.ipynb`**
 		* This notebook uses FastAI, a PyTorch-based deep learning library, to build the neural network, which is able to figure out the relationship between input features and find hidden relationship with them. The input data is an image dataset with labels, which is converted from time series with Gramian Angular Field algorithm as described in the previous sections.
 
-* **To run Grad-CAM**, put the grad cam folder in _ and then navigate the directory to run 
+* **To run Grad-CAM**, put the grad cam folder in home directory and then navigate the directory to run 
 	
 	* python3 main.py demo1 -a resnet34 -t layer4 -i test.png -k 1
 
