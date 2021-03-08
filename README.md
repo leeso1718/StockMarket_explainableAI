@@ -32,15 +32,16 @@ Project Website at: https://connielee99.github.io/Explainable-AI-in-Finance/
 	* `test_params.json`</br>contains parameters for running main on test data
 * **data**</br>
 	This folder contains all stock data from time series to image representation</br>
-	
-	**TSLA**</br>
-	* RawData</br> This folder contains all obtained raw time series data
-	* ProcData</br>This folder contains all processed csv files from RawData
-	* TestData</br> This folder contains test target
-	
 	**imgs**</br>
 	* all</br> This folder contains all images converted from time series
+	* ex) 2017-01-02.png
 	* test</br> This folder contains test images converted by main
+	**raw data**</br>
+	* `raw_NIFTY100.csv`</br>contains raw stoack market data (time series data)
+	
+	* `first_combined.csv`</br>contains data after preprocessing (extracting first hour after market open. (9:15-10:15))
+	* `gramian_df.csv`
+	* `label_dir_2.csv`
 * **notebooks**</br>
 	This folder is the notebook directory
 	
