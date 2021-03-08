@@ -9,21 +9,12 @@ Deep learning architectures are now publicly recognized and repeatedly proven to
 
 Project Website at: https://connielee99.github.io/Explainable-AI-in-Finance/
 
-## Instructions on `python run.py test`
-* This project aims to apply the Grad-CAM technique to a CNN model trained on images that represent the volatility record of Tesla Inc.'s stock `(ticker = TSLA)` during the hour prior to the market open every day to predict the stock's volatility during the market hours. For this mid-quarter checkpoint, our `run.py test` generates those images that will be used to train a CNN model, from a raw financial transaction record stored as time series data.
+## Instructions on Runing Model
+* This project aims to apply the Grad-CAM technique to a CNN model trained on images that represent closing prices during the rirst hour of market exchange.
 * When you execute this code in the directory, it performs the following things:
-	* **Input Data**
-		* `test` target works on the data of only 1 day out of all the data we have for 2 years in total. Specifically, it uses the intra-day transaction record from January 15th, 2021.
-		* Data are stored as 2 separate files.
-			* The first file is at `../data/TSLA/TestData/test_20210115.csv` and covers the transaction data during the hour prior to the market open on that date.
-			* The second file is at `../data/TSLA/TestData/test_market_vol_20210115.csv` and covers the transaction data during the market hours on that data. This second data file includes preprocessed data of volatility for the sake of ease for this `test` execution.
-	* **Output**
-		* The execution results in 2 outputs: an image and a table.
-			* **Image**
-				* This image is a representation of all the volatility data during the hour prior to the market open on that date, generated using the technique Gramian Angular Field. The image will be stored in the `.png` format.
-			* **Table of Label**
-				* This table has two columns. One with image IDs and the other with corresponding label to that image. The table will be stored in the `.csv` format.
-		* Both the image and table will be stored in `../data/imgs/test`.
+	* **Preprocessing**
+	* Run every cell in `Data Processing.ipynb`
+
 
 ## Directory Structure
 * **config**</br>
@@ -36,11 +27,12 @@ Project Website at: https://connielee99.github.io/Explainable-AI-in-Finance/
 	* This folder contains all images converted from time series. ex) 2017-01-02.png
 	
 	**raw data**</br>
-	* `raw_NIFTY100.csv`</br>contains raw stoack market data (time series data)
-	
-	* `first_combined.csv`</br>contains data after preprocessing (extracting first hour after market open. (9:15-10:15))
-	* `gramian_df.csv`
-	* `label_dir_2.csv`
+	* `raw_NIFTY100.csv`</br>contains raw stoack market data; time series data
+
+	**processed data**</br>
+	* `first_combined.csv`</br>contains data after preprocessing; extracting first hour after market open. (9:15-10:15)
+	* `gramian_df.csv`</br>contains data after implementing gramian angular algorithm
+	* `label_dir_2.csv`</br>contains data with label Whether the price goes up or down that day
 * **gradcam_submodule @ fd10ff7**</br>
 	This folder is the submodule for gradcam
 	
