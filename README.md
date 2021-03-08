@@ -18,7 +18,7 @@ Project Website at: https://connielee99.github.io/Explainable-AI-in-Finance/
 	* **2. Run every cell in `Image Conversion.ipynb`**
 		* This notebook is for an image conversion with `first_combined.csv` data. We will converse data into image with Gramian Angular Algorithm.
 		*  **Input:**`first_combined.csv` **output**images in imgs folder
-	* **3.Run every cell in `CNN.ipynb`**
+	* **3. Run every cell in `CNN.ipynb`**
 		* This notebook uses FastAI, a PyTorch-based deep learning library, to build the neural network, which is able to figure out the relationship between input features and find hidden relationship with them. The input data is an image dataset with labels, which is converted from time series with Gramian Angular Field algorithm as described in the previous sections.
 
 * **For GradCam**, put the grad cam folder in _ and then in navigate to directory to run 
