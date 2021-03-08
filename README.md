@@ -15,11 +15,7 @@ Project Website at: https://connielee99.github.io/Explainable-AI-in-Finance/
 	* **1. Preprocessing**
 	* Run every cell in `Data Processing.ipynb`
 	* This notebooke is preprocessing the raw data by extracting closing prices during first hour after market open and labeling depends on prices increasing or decreasing
-		* **input**</br>
-		* `raw_NIFTY100.csv`
-
-		* **output**</br>
-		* `first_combined.csv` </br> contains closing prices during the first hour of market exchange
+	* **Input:** `raw_NIFTY100.csv` **output:** `first_combined.csv` </br> contains closing prices during the first hour of market exchange
 
 ## Directory Structure
 * **config**</br>
