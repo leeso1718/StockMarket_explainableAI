@@ -41,7 +41,7 @@ Project Website at: https://connielee99.github.io/Explainable-AI-in-Finance/
 	* `first_combined.csv`</br>contains data after preprocessing (extracting first hour after market open. (9:15-10:15))
 	* `gramian_df.csv`
 	* `label_dir_2.csv`
-* **gradcam_submodule @ fd10ff7**
+* **gradcam_submodule @ fd10ff7**</br>
 	This folder is the submodule for gradcam
 	
 * **notebooks**</br>
@@ -56,21 +56,20 @@ Project Website at: https://connielee99.github.io/Explainable-AI-in-Finance/
 	
 	**report_img**</br>
 	* This folder contains images extracted from coded notebooks and included in the written report
+	* 
 * **src**</br>
 	This folder contains library codes extracted from notebooks
 	
 	**features**</br>
-		* `build_features.py`</br>scripts to build features from merged data
-		* `build_labels.py`</br>scripts to create labels for image classification
-		* `build_images.py`</br>scripts to convert and save time series data to images
+	* `build_features.py`</br>scripts to build features from merged data
+	* `build_labels.py`</br>scripts to create labels for image classification
+	* `build_images.py`</br>scripts to convert and save time series data to images
 	**model**</br>
-		* `gradcam.py`</br>scripts to implement gradcam
+	* `gradcam.py`</br>scripts to implement gradcam
 
-* **test**
+* **test**</br>
       This folder contains test results and test images
-      
-      **grad_cam_result**</br>
-		
+      		
 * **`Dockerfile`**</br>
 	This is the dockerfile necessary to build the environment for this project development
 * **`run.py`**</br>
