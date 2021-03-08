@@ -33,9 +33,8 @@ Project Website at: https://connielee99.github.io/Explainable-AI-in-Finance/
 * **data**</br>
 	This folder contains all stock data from time series to image representation</br>
 	**imgs**</br>
-	* all</br> This folder contains all images converted from time series
-	* ex) 2017-01-02.png
-	* test</br> This folder contains test images converted by main
+	* This folder contains all images converted from time series. ex) 2017-01-02.png
+	
 	**raw data**</br>
 	* `raw_NIFTY100.csv`</br>contains raw stoack market data (time series data)
 	
