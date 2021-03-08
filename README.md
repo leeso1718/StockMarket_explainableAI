@@ -11,13 +11,15 @@ Project Website at: https://connielee99.github.io/Explainable-AI-in-Finance/
 
 ## Instructions on Runing Project
 * This project aims to apply the Grad-CAM technique to a CNN model trained on images that represent closing prices during the first hour of market exchange. 
-* **To engineer data and create a CNN model**, you would need to run each notebook in `notebooks` folder in following order:
+* **To engineer data and create a CNN model**, you would need to run each notebook in `notebooks` folder in the following order:
 	* **1. Run every cell in `Data Processing.ipynb`**
 		* This notebooke is preprocessing the raw data by extracting closing prices during first hour after market open and labeling depends on prices increasing or decreasing
-		* **Input:** `raw_NIFTY100.csv` **output:** `first_combined.csv` contains closing prices during the first hour of market exchange
+		* **Input:** `raw_NIFTY100.csv`
+		* **output:** `first_combined.csv` contains closing prices during the first hour of market exchange
 	* **2. Run every cell in `Image Conversion.ipynb`**
 		* This notebook is for an image conversion with `first_combined.csv` data. We will converse data into image with Gramian Angular Algorithm.
-		*  **Input:**`first_combined.csv` **output**images in imgs folder
+		*  **Input:**`first_combined.csv`
+		*  **output** `.png` images in `imgs` folder
 	* **3. Run every cell in `CNN.ipynb`**
 		* This notebook uses FastAI, a PyTorch-based deep learning library, to build the neural network, which is able to figure out the relationship between input features and find hidden relationship with them. The input data is an image dataset with labels, which is converted from time series with Gramian Angular Field algorithm as described in the previous sections.
 
